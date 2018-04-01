@@ -12,19 +12,18 @@ ul {
   border: 1px solid black;
   margin: 0px;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul li {
   width: 100%;
-}
-
-ul li:last-child {
   text-align: center;
 }
 
 .inline {
   display: inline-block;
-  /* margin: 0px; */
   width: 49%;
 }
 
@@ -38,22 +37,10 @@ ul#a {
 ul#b {
   height: 150px;
 }
-ul#c {
+ul#c , ul#d {
   height: 125px;
 }
-ul#d {
-  height: 125px;
-}
-ul#e {
-  height: 250px;
-}
-ul#f {
-  height: 250px;
-}
-ul#g {
-  height: 250px;
-}
-ul#h {
+ul#e , ul#f , ul#g , ul#h {
   height: 250px;
 }
 
@@ -61,3 +48,57 @@ footer ul {
   height: 80px;
 }
 
+
+@media only screen and (min-width: 800px) {
+
+  body {
+    max-width: 960px;
+    margin: auto;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  ul#a {
+    height: 100px;
+    float: left;
+  }
+  ul#b {
+    height: 600px;
+    width: 19%;
+    float: left;
+  }
+  ul#c , ul#d {
+    height: 200px;
+  }
+  ul#e , ul#f , ul#g , ul#h {
+    height: 250px;
+  }
+
+  div.flex1 {
+    display: flex;
+    float: left;
+    height: 200px;
+    width: 80.5%;
+  }
+
+  div.flex2 {
+    display: flex;
+    float: left;
+    height: 250px;
+    width: 80.7%;
+  }
+
+  div.inline {
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer ul {
+    height: 150px;
+    width: 80.5%;
+    display: flex;
+    align-items: baseline;
+  }
+}
